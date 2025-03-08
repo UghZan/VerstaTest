@@ -1,0 +1,30 @@
+﻿@model AddOrderModel
+@{
+    ViewBag.PageTitle = "Оформление заказа";
+}
+<html>
+    <body>
+    @using (Html.BeginForm("AddOrder", "Home", FormMethod.Post))
+    {
+            <p>Город отправителя: @Html.TextBoxFor(m => m.SenderCity, "", new { type = "text" }) 
+            @Html.ValidationMessageFor(m => m.SenderCity, "", new { @class = "error" })</p>
+
+            <p>Адрес отправителя: @Html.TextBoxFor(m => m.SenderHomeAddress, "", new { type = "text" }) 
+            @Html.ValidationMessageFor(m => m.SenderHomeAddress, "", new { @class = "error" })</p>
+
+            <p>Город получателя: @Html.TextBoxFor(m => m.ReceiverCity, "", new { type = "text" }) 
+            @Html.ValidationMessageFor(m => m.ReceiverCity, "", new { @class = "error" })</p>
+
+            <p>Адрес получателя: @Html.TextBoxFor(m => m.ReceiverHomeAddress, "", new { type = "text" }) 
+            @Html.ValidationMessageFor(m => m.ReceiverHomeAddress, "", new { @class = "error" })</p>
+
+            <p>Вес груза: @Html.TextBoxFor(m => m.OrderWeight, "", new { type = "number" }) 
+            @Html.ValidationMessageFor(m => m.OrderWeight, "", new { @class = "error" })</p>
+
+            <p>Дата забора груза: @Html.TextBoxFor(m => m.OrderPickupTime, "", new { type = "date" }) 
+            @Html.ValidationMessageFor(m => m.OrderPickupTime, "", new { @class = "error" })</p>
+
+            <input type="submit" value="Создать заказ" />
+    }
+    </body>
+</html>

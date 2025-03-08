@@ -1,0 +1,34 @@
+﻿@model GetOrderModel
+@{
+
+}
+<div class="order-main-div">
+    <div class="order-name-div">Заказ <b>@Model.Id</b></div>
+    <div class="order-dest-div">
+        <div class="order-dest-sub-div" style="width: 45%">
+           <p class="city-title">Город отправителя: <b>@Model.SenderCity</b></p>
+           <p class="centered"><i>Адрес: </i>@Model.SenderHomeAddress</p>
+        </div>
+        <div class="order-dest-sub-div" style="width: 10%">
+            <p class="centered" style="font-size: 24px">-></p>
+        </div>
+        <div class="order-dest-sub-div" style="width: 45%">
+           <p class="city-title">Город получателя: <b>@Model.ReceiverCity</b></p>
+           <p class="centered"><i>Адрес: </i>@Model.ReceiverHomeAddress</p>
+        </div>
+    </div>
+    <div class="order-info-div">
+        <div class="order-info-sub-div">
+            <p><b>Вес:</b> @Model.OrderWeight кг</p>
+        </div>
+        <div class="order-info-sub-div">
+            <p><b>Дата забора груза:</b> @Model.OrderPickupTime.ToString("d")</p>
+        </div>
+        <div class="order-info-sub-div">
+            <p><b>Дата создания заказа:</b> @Model.CreationDate.ToString("d")</p>
+        </div>
+        <div class="order-info-sub-div order-info-button">
+            <a href=@("/Home/ViewOrder?id="+Model.Id)>Подробнее</a>
+        </div>
+    </div>
+</div>

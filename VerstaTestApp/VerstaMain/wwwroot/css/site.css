@@ -1,0 +1,89 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+.error {
+    color: red;
+}
+
+.centered{
+    text-align: center;
+}
+.order-column-div {
+    display: flex;
+    flex-flow: column;
+    width: 100%;
+}
+.order-main-div{
+    display: flex;
+    flex-flow: column;
+    border: 2px solid black;
+}
+.order-name-div {
+    width: 100%;
+    font-size: 24px;
+    border: 2px solid black;
+}
+.order-dest-div {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-evenly;
+}
+.order-dest-sub-div {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+}
+.order-info-div {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-around;
+    height: 30px;
+    border: 2px solid black;
+}
+.city-title {
+    font-size: 24px;
+    text-align: center;
+}
+.order-info-sub-div {
+    flex-grow: 1;
+    text-align: center;
+}
+.order-info-button {
+    background-color: black;
+}
+.order-info-button a{
+    color: white;
+}
+
+.row {
+    display: flex;
+    flex-flow: row;
+    justify-content: start;
+}
+
+.row p{
+    width: auto;
+}
+.row b {
+    width: auto;
+}

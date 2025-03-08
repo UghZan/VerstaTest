@@ -1,0 +1,14 @@
+﻿@model IEnumerable<GetOrderModel>
+@{
+    ViewBag.PageTitle = "Список заказов";
+}
+<html>
+<body>
+    <div class="orders-column-div">
+    @foreach(var model in Model)
+    {
+        await Html.RenderPartialAsync("PartialOrderInfo", model);
+    }
+    </div>
+    </body>
+</html>

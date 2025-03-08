@@ -1,0 +1,16 @@
+﻿@model GetOrderModel
+@{
+    ViewBag.PageTitle = "Информация о заказе";
+}
+<html>
+    <body>
+        <h2>Заказ @Model.Id</h2>
+        <p>Создан <b>@Model.CreationDate.ToString("g")</b></p>
+        <div class="row"><p>Город отправителя: </p><b>@Model.SenderCity</b></div>
+        <div class="row"><p>Адрес отправителя: </p><b>@Model.SenderHomeAddress</b></div>
+        <div class="row"><p>Город получателя: </p><b>@Model.ReceiverCity</b></div>
+        <div class="row"><p>Адрес получателя: </p><b>@Model.ReceiverHomeAddress</b></div>
+        <div class="row"><p>Вес груза: </p><b>@Model.OrderWeight</b> <p>кг.</p></div>
+        <div class="row"><p>Дата получения посылки: </p><b>@Model.OrderPickupTime.ToString("d")</b></div>
+    </body>
+</html>
